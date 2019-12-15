@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyGlamm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKO-nx-AYY">
+                                <rect key="frame" x="0.0" y="141" width="375" height="526"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bfv-OO-K4x">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="526"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="bfv-OO-K4x" secondAttribute="trailing" id="2Vn-Hu-HEA"/>
+                                    <constraint firstItem="bfv-OO-K4x" firstAttribute="top" secondItem="nKO-nx-AYY" secondAttribute="top" id="Uae-Aq-W7O"/>
+                                    <constraint firstItem="bfv-OO-K4x" firstAttribute="leading" secondItem="nKO-nx-AYY" secondAttribute="leading" id="Xal-N2-TfX"/>
+                                    <constraint firstAttribute="bottom" secondItem="bfv-OO-K4x" secondAttribute="bottom" id="hhi-7X-zYs"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="lYf-lA-dbU">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for resturants" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Se-E9-NRV">
+                                <rect key="frame" x="20" y="81" width="225" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bGQ-P1-ZFB"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0G-FF-8Ab">
+                                <rect key="frame" x="253" y="81" width="112" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.75391992539999997" blue="0.19965391539999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Search ">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchButtonEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HPm-zu-oQ1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zomato Resturant Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="535-PA-lhb">
+                                <rect key="frame" x="20" y="40" width="195.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nKO-nx-AYY" firstAttribute="top" secondItem="4Se-E9-NRV" secondAttribute="bottom" constant="20" id="2Bx-KR-oBA"/>
+                            <constraint firstItem="lYf-lA-dbU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BdO-1V-XOm"/>
+                            <constraint firstItem="535-PA-lhb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="GDg-PD-GKr"/>
+                            <constraint firstItem="4Se-E9-NRV" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="Gs2-mJ-2Qv"/>
+                            <constraint firstItem="4Se-E9-NRV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Npb-pf-RyE"/>
+                            <constraint firstAttribute="bottom" secondItem="nKO-nx-AYY" secondAttribute="bottom" id="TQt-4y-uKG"/>
+                            <constraint firstItem="nKO-nx-AYY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Xen-x1-L9d"/>
+                            <constraint firstItem="H0G-FF-8Ab" firstAttribute="top" secondItem="4Se-E9-NRV" secondAttribute="top" id="dRz-vC-sWk"/>
+                            <constraint firstItem="H0G-FF-8Ab" firstAttribute="bottom" secondItem="4Se-E9-NRV" secondAttribute="bottom" id="fEO-Sj-jfh"/>
+                            <constraint firstItem="4Se-E9-NRV" firstAttribute="leading" secondItem="535-PA-lhb" secondAttribute="leading" id="k1V-I9-b5B"/>
+                            <constraint firstItem="H0G-FF-8Ab" firstAttribute="leading" secondItem="4Se-E9-NRV" secondAttribute="trailing" constant="8" id="knx-nE-cQN"/>
+                            <constraint firstItem="lYf-lA-dbU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ors-sZ-By1"/>
+                            <constraint firstItem="4Se-E9-NRV" firstAttribute="top" secondItem="535-PA-lhb" secondAttribute="bottom" constant="20" id="pOc-9F-bni"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nKO-nx-AYY" secondAttribute="trailing" id="qws-Fs-LhN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H0G-FF-8Ab" secondAttribute="trailing" constant="10" id="weB-ja-q94"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="lYf-lA-dbU" id="1Aq-jN-E2S"/>
+                        <outlet property="searchDisplayController" destination="hYU-EK-vz0" id="t5K-Km-cM6"/>
+                        <outlet property="searchTextField" destination="4Se-E9-NRV" id="d2N-bg-WFL"/>
+                        <outlet property="tableViewZ" destination="bfv-OO-K4x" id="7XZ-Ya-ICu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="hYU-EK-vz0">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="kbN-XF-skf"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="KIe-Lj-YjD"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="9JZ-Eb-9W6"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="VZc-Xi-P0k"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="-2247.1999999999998" y="-116.49175412293854"/>
+        </scene>
+    </scenes>
+</document>

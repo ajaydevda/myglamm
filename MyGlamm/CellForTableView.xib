@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell alpha="0.0" contentMode="scaleToFill" restorationIdentifier="restroCellId" selectionStyle="default" indentationWidth="10" reuseIdentifier="restroCellId" rowHeight="84" id="KGk-i7-Jjw" customClass="CellForTableView" customModule="MyGlamm" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="384" height="84"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="384" height="83.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JJg-t7-HEN">
+                        <rect key="frame" x="0.0" y="5" width="115" height="73.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resturant Name" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XS0-aH-cpn">
+                        <rect key="frame" x="135" y="10" width="192" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSZ-Fo-tlH">
+                        <rect key="frame" x="135" y="40.5" width="49" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="very good" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xq-xP-VN9">
+                        <rect key="frame" x="199" y="40.5" width="76.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.6" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jw7-21-a7a" customClass="paddingUIlabel" customModule="MyGlamm" customModuleProvider="target">
+                        <rect key="frame" x="321.5" y="10" width="52.5" height="21"/>
+                        <color key="backgroundColor" red="0.046600033402223108" green="0.64770383883248739" blue="0.074245983686818742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="7xq-xP-VN9" firstAttribute="top" secondItem="XSZ-Fo-tlH" secondAttribute="top" id="3n0-OA-6zd"/>
+                    <constraint firstItem="XS0-aH-cpn" firstAttribute="leading" secondItem="JJg-t7-HEN" secondAttribute="trailing" constant="20" id="5IG-ET-U0A"/>
+                    <constraint firstItem="7xq-xP-VN9" firstAttribute="leading" secondItem="XSZ-Fo-tlH" secondAttribute="trailing" constant="15" id="7H1-Ui-A0s"/>
+                    <constraint firstAttribute="bottom" secondItem="JJg-t7-HEN" secondAttribute="bottom" constant="5" id="BoV-Ih-PkY"/>
+                    <constraint firstItem="7xq-xP-VN9" firstAttribute="bottom" secondItem="XSZ-Fo-tlH" secondAttribute="bottom" id="H5J-V8-Xzw"/>
+                    <constraint firstItem="XSZ-Fo-tlH" firstAttribute="leading" secondItem="XS0-aH-cpn" secondAttribute="leading" id="JP1-td-Lmc"/>
+                    <constraint firstAttribute="trailing" secondItem="jw7-21-a7a" secondAttribute="trailing" constant="10" id="LsR-cB-7FG"/>
+                    <constraint firstItem="XS0-aH-cpn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="MG8-C3-gtA"/>
+                    <constraint firstItem="jw7-21-a7a" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="NdC-9n-2iw"/>
+                    <constraint firstItem="JJg-t7-HEN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="VPX-4b-DFt"/>
+                    <constraint firstItem="JJg-t7-HEN" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.3" id="gBl-aK-AZf"/>
+                    <constraint firstItem="XSZ-Fo-tlH" firstAttribute="top" secondItem="XS0-aH-cpn" secondAttribute="bottom" constant="10" id="gnB-56-Qas"/>
+                    <constraint firstItem="XS0-aH-cpn" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.5" id="k6l-wn-Efx"/>
+                    <constraint firstItem="JJg-t7-HEN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="xio-Md-oKz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="ratingText" destination="7xq-xP-VN9" id="YlX-CX-dhC"/>
+                <outlet property="rating_label" destination="jw7-21-a7a" id="iI0-z7-JMt"/>
+                <outlet property="restroImage" destination="JJg-t7-HEN" id="4yL-8K-Rcm"/>
+                <outlet property="restroLabel" destination="XS0-aH-cpn" id="aNS-dZ-I2m"/>
+            </connections>
+            <point key="canvasLocation" x="-714.49275362318849" y="25.446428571428569"/>
+        </tableViewCell>
+    </objects>
+</document>

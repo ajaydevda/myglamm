@@ -1,0 +1,5 @@
+version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+options: "e490a6202e85631a18684af322e0820e"
+build_time: [1576237792, 213850000]
+inputs:
+  "/Users/c711091/Library/Autosave Information/MyGlamm/Pods/SwiftyJSON/Source/SwiftyJSON/SwiftyJSON.swift": [1576131442, 440979891]
