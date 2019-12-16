@@ -73,27 +73,25 @@ class APIManager: NSObject {
                 var resAggregate_rating = json!["restaurants"][i]["restaurant"]["user_rating"]["aggregate_rating"].string
                 
                 
-                guard resName != nil
-                else
-                {
-                    return resName = ""
+                if let resNamTmp = resName{
+                    resName = resNamTmp
+                }else{
+                    resName = ""
                 }
-                guard resRatingText != nil
-                    else
-                {
-                    return resRatingText = ""
+                if let resRatingTmp = resRatingText{
+                    resRatingText = resRatingTmp
+                }else{
+                    resRatingText = ""
                 }
-                
-                guard resAggregate_rating != nil
-                    else
-                {
-                    return resAggregate_rating = ""
+                if let resAggRatingTmp = resAggregate_rating{
+                    resAggregate_rating = resAggRatingTmp
+                }else{
+                    resAggregate_rating = ""
                 }
-                
-                guard resthumbUrl != nil
-                    else
-                {
-                    return resthumbUrl = ""
+                if let resRatingTmp = resthumbUrl{
+                    resthumbUrl = resRatingTmp
+                }else{
+                    resthumbUrl = ""
                 }
                 
                 

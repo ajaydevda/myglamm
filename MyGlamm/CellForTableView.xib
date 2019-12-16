@@ -42,8 +42,12 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.6" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jw7-21-a7a" customClass="paddingUIlabel" customModule="MyGlamm" customModuleProvider="target">
-                        <rect key="frame" x="321.5" y="10" width="52.5" height="21"/>
+                        <rect key="frame" x="334" y="10" width="40" height="17"/>
                         <color key="backgroundColor" red="0.046600033402223108" green="0.64770383883248739" blue="0.074245983686818742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="ZSK-n1-uTB"/>
+                            <constraint firstAttribute="height" constant="17" id="eKP-Nb-gb6"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <nil key="highlightedColor"/>
