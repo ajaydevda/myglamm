@@ -86,24 +86,14 @@ extension ViewController:UITableViewDataSource, UITableViewDelegate
         cell?.ratingText?.text = resturantData[indexPath.row].rating_text
         cell!.tag = indexPath.row
         cell!.restroImage.image=nil
-
         
+        aniamtedRow(rowImage: cell!.restroImage)
+        
+        print("cell Return\(indexPath.row)")
         
         if(self.resturantData[indexPath.row].thumb != ""){
        
-       /* DispatchQueue.global(qos: .background).async {
-           // cell!.datafetchImageData(imgUrl: self.resturantData[indexPath.row].thumb)
-       
-            let image = self.apiObj.datafetchImageData(imgUrl: self.resturantData[indexPath.row].thumb)
-            
-            DispatchQueue.main.async {
-                cell!.restroImage.image=image
-                }
-            
-            }
-        }*/
-            
-            
+   
             var urlRequest = URLRequest(url: URL(string: self.resturantData[indexPath.row].thumb)!)
                 urlRequest.httpMethod = "GET"
         
@@ -134,23 +124,16 @@ extension ViewController:UITableViewDataSource, UITableViewDelegate
                     // does not wait. But the code in notify() gets run
                     // after enter() and leave() calls are balanced
         
-                    group.notify(queue: .main) {
-                    
-                        DispatchQueue.main.async {
-                         
-                            cell!.restroImage.image=imageData
-                            
-                        }
+            group.notify(queue: .main) {
+
+            DispatchQueue.main.async {
+            cell!.restroImage.image=imageData
+            }
                         
-                    }
-                    
+            }
             }
             
         }
-            
-            
-            
-            
         else{
             cell!.restroImage?.image = UIImage.init(named: "Nodata")
         }
@@ -160,6 +143,35 @@ extension ViewController:UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100;
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+      //  if (shownIndexes.contains(indexPath) == false) {
+         //   shownIndexes.append(indexPath)
+        
+            cell.transform = CGAffineTransform(translationX: 0, y: 50)
+            cell.layer.shadowColor = UIColor.black.cgColor
+            cell.layer.shadowOffset = CGSize(width: 10, height: 10)
+            cell.alpha = 0
+            
+            UIView.beginAnimations("rotation", context: nil)
+            UIView.setAnimationDuration(0.5)
+            cell.transform = CGAffineTransform(translationX: 0, y: 0)
+            cell.alpha = 1
+            cell.layer.shadowOffset = CGSize(width: 0, height: 0)
+        
+        
+            UIView.commitAnimations()
+       // }
+        print("willDisplay Index\(indexPath.row)")
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+         print("didEndDisplaying  Index\(indexPath.row)")
+    }
+    
+    
+    
 }
 
 
@@ -206,6 +218,17 @@ extension ViewController : tableDataUpdate{
     func activityIndicatorShow()  {
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
+    }
+    
+    func aniamtedRow( rowImage:UIImageView)
+    {
+        UIView.animate(withDuration: 0.0, animations: {() -> Void in
+            rowImage.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        }, completion: {(_ finished: Bool) -> Void in
+            UIView.animate(withDuration: 2.0, animations: {() -> Void in
+                rowImage.transform = CGAffineTransform(scaleX: 1, y: 1)
+            })
+        })
     }
     
     

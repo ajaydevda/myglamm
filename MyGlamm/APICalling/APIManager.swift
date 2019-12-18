@@ -114,50 +114,6 @@ class APIManager: NSObject {
     
     
     
-//
-//    func datafetchImageData(imgUrl:String?)->UIImage{
-//        // self.restroImage.image=nil
-//        var urlRequest = URLRequest(url: URL(string: imgUrl!)!)
-//        urlRequest.httpMethod = "GET"
-//
-//        let cache =  URLCache.shared
-//        if let data = cache.cachedResponse(for: urlRequest)?.data,let image = UIImage(data: data)
-//        {
-//          return image
-//        }
-//        else{
-//            print(">>>>>>>>>>>\(imgUrl)")
-//            let session = URLSession.shared
-//            var imageData:UIImage?
-//
-//            let group = DispatchGroup()
-//            group.enter()
-//
-//            DispatchQueue.main.async {
-//                let task = session.dataTask(with: urlRequest, completionHandler: { data, response, error -> Void in
-//                    print(data!)
-//                    imageData = UIImage(data: data!)!
-//
-//                })
-//                task.resume()
-//
-//
-//                group.leave()
-//            }
-//
-//            // does not wait. But the code in notify() gets run
-//            // after enter() and leave() calls are balanced
-//
-//            group.notify(queue: .main) {
-//                return imageData
-//            }
-//
-//
-//
-//
-//            return imageData!
-//        }
-//
-//    }
+
     
 }

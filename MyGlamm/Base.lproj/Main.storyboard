@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKO-nx-AYY">
-                                <rect key="frame" x="0.0" y="141" width="375" height="526"/>
+                                <rect key="frame" x="0.0" y="140.5" width="375" height="526.5"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bfv-OO-K4x">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="526"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="526.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableView>
@@ -40,7 +40,7 @@
                                 <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for resturants" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Se-E9-NRV">
-                                <rect key="frame" x="20" y="81" width="225" height="40"/>
+                                <rect key="frame" x="20" y="80.5" width="225" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="bGQ-P1-ZFB"/>
                                 </constraints>
@@ -49,7 +49,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0G-FF-8Ab">
-                                <rect key="frame" x="253" y="81" width="112" height="40"/>
+                                <rect key="frame" x="253" y="80.5" width="112" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.75391992539999997" blue="0.19965391539999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Search ">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -58,14 +58,14 @@
                                     <action selector="searchButtonEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HPm-zu-oQ1"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zomato Resturant Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="535-PA-lhb">
-                                <rect key="frame" x="20" y="40" width="195.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zomato Resturant Search" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="535-PA-lhb">
+                                <rect key="frame" x="20" y="40" width="204" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.91764705882352937" green="0.12941176470588234" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="nKO-nx-AYY" firstAttribute="top" secondItem="4Se-E9-NRV" secondAttribute="bottom" constant="20" id="2Bx-KR-oBA"/>
                             <constraint firstItem="lYf-lA-dbU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BdO-1V-XOm"/>
