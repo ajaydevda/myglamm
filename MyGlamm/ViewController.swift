@@ -148,7 +148,7 @@ extension ViewController:UITableViewDataSource, UITableViewDelegate
       //  if (shownIndexes.contains(indexPath) == false) {
          //   shownIndexes.append(indexPath)
         
-            cell.transform = CGAffineTransform(translationX: 0, y: 50)
+        /*    cell.transform = CGAffineTransform(translationX: 0, y: 50)
             cell.layer.shadowColor = UIColor.black.cgColor
             cell.layer.shadowOffset = CGSize(width: 10, height: 10)
             cell.alpha = 0
@@ -160,15 +160,12 @@ extension ViewController:UITableViewDataSource, UITableViewDelegate
             cell.layer.shadowOffset = CGSize(width: 0, height: 0)
         
         
-            UIView.commitAnimations()
+            UIView.commitAnimations()*/
        // }
         print("willDisplay Index\(indexPath.row)")
     }
     
-    
-    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-         print("didEndDisplaying  Index\(indexPath.row)")
-    }
+
     
     
     
@@ -223,9 +220,9 @@ extension ViewController : tableDataUpdate{
     func aniamtedRow( rowImage:UIImageView)
     {
         UIView.animate(withDuration: 0.0, animations: {() -> Void in
-            rowImage.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+            rowImage.transform = CGAffineTransform(scaleX: 0.85, y: 0.85)
         }, completion: {(_ finished: Bool) -> Void in
-            UIView.animate(withDuration: 2.0, animations: {() -> Void in
+            UIView.animate(withDuration: 0.7, animations: {() -> Void in
                 rowImage.transform = CGAffineTransform(scaleX: 1, y: 1)
             })
         })
